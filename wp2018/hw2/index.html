@@ -4,98 +4,35 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-html,body,h1,h2,h3,h4,h5,h6,div,pre {
-    font-family:'Times New Roman', Times, serif;
-}
 
-
-.main{
-    width: 32em;
-    overflow:scroll;
-    background-color:floralwhite;
-    position:fixed;
-    left:0vw;
-    top: 0vw;
-    height:100vh;
-}
-.picture{
-    width: 48em;
-    position:fixed;
-    left:32em;
-    top: 0em;
-    height:100vh;
-}
-.center{
-    width:24em;
-    height: 100vh;
-    position:absolute;
-    left: 0em;
-    top: 0em;
-    background-attachment:local;
-    background-image: url("picture for html/CENTER/1.JPG");
-    background-size:cover;
-    background-position: center;
-}
-.right{
-    width: 24em;
-    height: 100%;
-    position: absolute;
-    left:24em;
-    top: 0em;
-}
-
-.up{
-    min-height: 50vh;
-    background-attachment:local;
-    background-image: url("picture for html/UP/1.jpg");
-    background-size:cover;
-    background-position: center;
-}
-.down{
-    min-height: 50vh;
-    background-attachment:local;
-    background-image: url("picture for html/DOWN/Quote.jpg");
-    background-size:cover;
-    background-position: center;
-}
-.paragragh{
-    position:absolute;
-    top:30vh;
-    width: inherit;
-}
-.Title{
-    position:absolute;
-    
-}
-
-</style>
 <body>
   
   
   <div class="main">
    <h1 class="Title">Fu Kai Chang</h1>
+   <div class="Taiwan"></div>
    <pre>
 
 
+    
+                    Student at <a href="https://www.ee.ncku.edu.tw/en/">NCKU EE Department</a>
 
-
-
-
-    Still developing
-
+        
+    <q style="font-size:15pt ">Only struggle on what you believe can you regain freedom.</q>
    </pre>
    <div class="paragragh">
-    
-    <pre>
-            <h2>Favorite</h2>
-            Music
-                    Movie Soundtrack(e.g. <a href="https://www.youtube.com/watch?v=pi3mCTOULqg">Pirates of the Caribbean</a> )
-            
+        <h2>Favorite</h2>
+        
+    <pre style="font-size:14pt">
+    <b>Music</b>
+            Movie Soundtrack(e.g. <a href="https://www.youtube.com/watch?v=pi3mCTOULqg">Pirates of the Caribbean</a> )
+            Game  Soundtrack(e.g. <a href="https://www.youtube.com/watch?v=29KHWW7XdJs&list=PLYJUcIONKyH_aHiVWZMR_jOEHdIpWOuV8">Quell Memento</a> ))
 
-            Subject: Mathematic
+    <b>Subject</b>
+            Mathematic
+            Computer Science
             
     </pre>
     
@@ -112,16 +49,15 @@ html,body,h1,h2,h3,h4,h5,h6,div,pre {
             <div class="up">
             </div>
             <div class="down">
-                
-                <div class="quote" id="1" style="color:ivory">
-                Our citizens have to choose between war and dishonour.<br>
-                They chose dishonour. They’ll have war.<br>
+                <div class="quote" id="quote1" >
+                Our citizens have to choose between war and dishonour.<br><br>
+                They chose dishonour. <b>They’ll have war.</b><br><br>
                 ---- revised from <i>Sir Winston Leonard Spencer Churchill</i><br><br>
                     
                 </div>
-                <div class="quote" id="2" style="color:ivory">
-                    One of the penalties for refusing to participate in politics <br>
-                    is that you end up being governed by your inferiors.<br>
+                <div class="quote" id="quote2" >
+                    One of the penalties for refusing to participate in politics <br><br>
+                    is that you end up <b>being governed by your inferiors</b>.<br><br>
                       ---- <i>Republic , Plato</i><br><br>
                 </div>  
             </div>
@@ -130,60 +66,7 @@ html,body,h1,h2,h3,h4,h5,h6,div,pre {
     </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-<script>
-
-
-
-
-
-$(document).ready(function () {
-
-    var indexCenter = 2;
-    var indexRight =2;
-    setInterval(function(){
-  if (indexCenter == 5) {
-    indexCenter = 1;
-      $('div.center').css({
-          'background-image':'url("picture for html/CENTER/'+indexCenter+'.JPG")'
-      });
-      
-  }
-
-  else{
-    $('div.center').css({
-          'background-image':'url("picture for html/CENTER/'+indexCenter+'.jpg")'
-      });
-  }
-  
-  indexCenter++;
-}, 15000);
-
-
-setInterval(function(){
-
-  if (indexRight == 5) {
-    indexRight = 1;
-  }
-      if(indexRight==4){
-        $('div.up').css({
-          'background-image':'url("picture for html/UP/'+indexRight+'.png")'
-        });
-      }
-      
-      else{
-        $('div.up').css({
-          'background-image':'url("picture for html/UP/'+indexRight+'.jpg")'
-        });
-      }
-  
-  
-      indexRight++;
-}, 20000);
-
-});
-
-
-</script>
+<script src="animation.js"></script>
 
 </body>
 </html>
